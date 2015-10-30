@@ -1,12 +1,6 @@
 {
-  "_args": [
-    [
-      "pakapak@git://github.com/EndyKaufman/pakapak.git",
-      "T:\\home\\group-tasks3\\group-tasks"
-    ]
-  ],
   "_from": "git://github.com/EndyKaufman/pakapak.git",
-  "_id": "pakapak@0.1.2",
+  "_id": "pakapak@0.1.4",
   "_inCache": true,
   "_installable": true,
   "_location": "/pakapak",
@@ -69,5 +63,5 @@
   "scripts": {
     "test": "mocha --reporter spec"
   },
-  "version": "0.1.3"
+  "version": "0.1.4"
 }
