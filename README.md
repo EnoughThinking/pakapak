@@ -45,7 +45,8 @@ npm + bower + other conf = pakapak
     $ npm test
 
 ## Release History
-
+* 0.1.4 
+    * Add travis-ci support 
 * 0.1.3 
     * Add method collectByKey 
     * Add test generate npm and bower dependencies from pakapak.json
