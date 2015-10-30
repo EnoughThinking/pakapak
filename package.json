@@ -1,46 +1,72 @@
 {
-    "name": "pakapak",
-    "version": "0.1.0",
-    "description": "npm + bower + other conf = pakapak",
-    "main": "index.js",
-    "scripts": {
-        "test": "mocha --reporter spec"
+    "_args": [
+        [
+            "pakapak@git://github.com/EndyKaufman/pakapak.git",
+            "T:\\home\\group-tasks3\\group-tasks"
+        ]
+    ],
+    "_from": "git://github.com/EndyKaufman/pakapak.git",
+    "_id": "pakapak@0.1.2",
+    "_inCache": true,
+    "_installable": true,
+    "_location": "/pakapak",
+    "_phantomChildren": {},
+    "_requested": {
+        "hosted": {
+            "directUrl": "https://raw.githubusercontent.com/EndyKaufman/pakapak/master/package.json",
+            "gitUrl": "git://github.com/EndyKaufman/pakapak.git",
+            "httpsUrl": "git+https://github.com/EndyKaufman/pakapak.git",
+            "shortcut": "github:EndyKaufman/pakapak",
+            "ssh": "git@github.com:EndyKaufman/pakapak.git",
+            "sshUrl": "git+ssh://git@github.com/EndyKaufman/pakapak.git",
+            "type": "github"
+        },
+        "name": "pakapak",
+        "raw": "pakapak@git://github.com/EndyKaufman/pakapak.git",
+        "rawSpec": "git://github.com/EndyKaufman/pakapak.git",
+        "scope": null,
+        "spec": "git://github.com/EndyKaufman/pakapak.git",
+        "type": "hosted"
     },
+    "_spec": "pakapak@git://github.com/EndyKaufman/pakapak.git",
+    "_where": "T:\\home\\group-tasks3\\group-tasks",
+    "author": {
+        "email": "admin@site15.ru",
+        "name": "Ilshat Khamitov",
+        "url": "http://site15.ru/"
+    },
+    "bugs": {
+        "url": "https://github.com/EndyKaufman/pakapak/issues"
+    },
+    "dependencies": {
+        "deasync": "^0.1.3",
+        "gulp": "^3.8.10",
+        "gulp-json-concat": "git://github.com/EndyKaufman/gulp-json-concat.git#master",
+        "json-concat": "0.0.0"
+    },
+    "description": "npm + bower + other conf = pakapak",
+    "devDependencies": {
+        "chai": "^3.4.0",
+        "mocha": "^2.3.3"
+    },
+    "homepage": "https://github.com/EndyKaufman/pakapak",
+    "keywords": [
+        "pakapak",
+        "bower",
+        "conf",
+        "npm"
+    ],
+    "license": "MIT",
+    "main": "index.js",
+    "name": "pakapak",
+    "optionalDependencies": {},
+    "readmeFilename": "README.md",
     "repository": {
         "type": "git",
         "url": "git://github.com/EndyKaufman/pakapak.git"
     },
-    "keywords": [
-        "npm",
-        "bower",
-        "conf"
-    ],
-    "author": {
-        "name": "Ilshat Khamitov",
-        "email": "admin@site15.ru",
-        "url": "http://site15.ru/"
+    "scripts": {
+        "test": "mocha --reporter spec"
     },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/EndyKaufman/pakapak/issues"
-    },
-    "homepage": "https://github.com/EndyKaufman/pakapak",
-    "dependencies": {
-        "gulp": "^3.8.10",
-        "json-concat": "0.0.0",
-        "deasync": "^0.1.3",
-        "gulp-json-concat": "git://github.com/EndyKaufman/gulp-json-concat.git#master"
-    },
-    "devDependencies": {
-        "mocha": "^2.3.3",
-        "chai": "^3.4.0"
-    },
-    "readme": "Pakapak\n=========\n\nnpm + bower + other conf = pakapak\n\n## Installation\n\n  npm install pakapak --save-dev\n\n## Usage\n\n  var pakapak = require('pakapak');\n\n  var result = collect([\"project/**/pakapak.json\"], true);\n\n  console.log(' { a: 1, app: 1, work: 1 }', result);\n\n## Tests\n\n  npm test\n\n## Release History\n\n* 0.1.0 Initial release",
-    "readmeFilename": "README.md",
-    "_id": "pakapak@0.1.0",
-    "dist": {
-        "shasum": "19cfc19c77039d881000c69e9f9d37931507a81e"
-    },
-    "_resolved": "git://github.com/EndyKaufman/pakapak.git#a510a99928ee44c131a5fdbf617dbd1ea668dc3b",
-    "_from": "git://github.com/EndyKaufman/pakapak.git"
+    "version": "0.1.3"
 }

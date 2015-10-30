@@ -1,0 +1,8 @@
+{
+    "version": "0.1.0",
+    "dependencies": {
+        "module1": "^3.0.5",
+        "appmodule1": "^3.0.0",
+        "workmodule1": "^3.0.0"
+    }
+}

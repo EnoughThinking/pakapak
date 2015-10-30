@@ -1,3 +1,19 @@
 {
-    "work": 1
+    "work": 2,
+    "npm": {
+        "devDependencies": {
+            "workmodule1": "^1.0.0",
+            "module1": "^1.0.3"
+        },
+        "dependencies": {
+            "workmodule1": "^2.0.0",
+            "module1": "^2.0.3"
+        }
+    },
+    "bower": {
+        "dependencies": {
+            "workmodule1": "^3.0.0",
+            "module1": "^3.0.3"
+        }
+    }
 }

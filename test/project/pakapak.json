@@ -1,16 +1,16 @@
 {
-    "app": 1,
+    "proj": 3,
     "npm": {
         "devDependencies": {
-            "appmodule1": "^1.0.0"
+            "module1": "^1.0.5"
         },
         "dependencies": {
-            "appmodule1": "^2.0.0"
+            "module1": "^2.0.5"
         }
     },
     "bower": {
         "dependencies": {
-            "appmodule1": "^3.0.0"
+            "module1": "^3.0.5"
         }
     }
 }
