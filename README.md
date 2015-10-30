@@ -34,7 +34,7 @@ npm + bower + other conf = pakapak
             "project/**/pakapak.json",
             'project/pakapak.json'
         ],
-        'npm.dependencies',
+        'bower.dependencies',
         'bower.json',
         'dependencies',
         true
