@@ -45,6 +45,8 @@ npm + bower + other conf = pakapak
     $ npm test
 
 ## Release History
+* 0.1.5 
+    * Add deepcopy source for collect 
 * 0.1.4 
     * Add travis-ci support 
 * 0.1.3 

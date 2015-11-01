@@ -4,6 +4,7 @@ var gulp = require("gulp");
 var jsonConcat = require("gulp-json-concat");
 var deasync = require('deasync');
 var merge = require("deepmerge");
+var deepcopy = require("deepcopy");
 var fs = require('fs');
 
 module.exports = {
@@ -30,13 +31,14 @@ module.exports = {
 }
 
 function collect(source, concatContent) {
+    var sourceCopy = deepcopy(source);
 
     if (concatContent === undefined)
         concatContent = false;
 
     var result = null;
 
-    gulp.src(source)
+    gulp.src(sourceCopy)
         .pipe(jsonConcat('pakapak.json', function(data) {
             result = data;
         }, concatContent));
@@ -49,20 +51,21 @@ function collect(source, concatContent) {
 }
 
 function collectByKey(source, sourceCollectKey, destination, destinationCollectKey, saveToFile) {
+    var sourceCopy = deepcopy(source);
 
     if (saveToFile === undefined)
         saveToFile = false;
 
-    if (!Array.isArray(source)) {
-        source = [source];
+    if (!Array.isArray(sourceCopy)) {
+        sourceCopy = [sourceCopy];
     }
-    if (source.length > 1) {
-        var sourceLast = collect(source[source.length - 1], true);
-        source.splice(source.length - 1, 1);
+    if (sourceCopy.length > 1) {
+        var sourceLast = collect(sourceCopy[sourceCopy.length - 1], true);
+        sourceCopy.splice(sourceCopy.length - 1, 1);
     } else {
         var sourceLast = {};
     }
-    var sourceAll = collect(source, true);
+    var sourceAll = collect(sourceCopy, true);
 
     var sourceJson = merge(sourceAll, sourceLast);
     var sourceCollectKeySplit = sourceCollectKey.split('.');
