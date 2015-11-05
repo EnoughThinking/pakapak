@@ -15,6 +15,12 @@ npm + bower + other conf = pakapak
     var result = collect(["project/**/pakapak.json"], true);
     console.log(' { a: 1, app: 1, work: 1 }', result);
 
+## Usage pakapak.saveToFile
+
+    pakapak.saveToFile('out.txt','test message');
+    pakapak.saveToFile('out.json',{obj1:'test object save to file'});
+    pakapak.saveToFile('out.json',['test save','arrray']);
+
 ## Fill package.json dependencies in root folder from sub folders/modules dependencies
 
     var result = collectByKey([
@@ -45,6 +51,8 @@ npm + bower + other conf = pakapak
     $ npm test
 
 ## Release History
+* 0.1.6 
+    * Add save to file method
 * 0.1.5 
     * Add deepcopy source for collect 
 * 0.1.4 

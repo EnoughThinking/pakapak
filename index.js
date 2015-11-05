@@ -9,14 +9,16 @@ var fs = require('fs');
 
 module.exports = {
     deasync: deasync,
+
     /**
      * Collect content of all json files (source)
      *
      * @param  {Array} source
-     * @param  {Boolean/Undefined} concatContent
+     * @param  {Boolean|Undefined} concatContent
      * @return {Object}
      */
     collect: collect,
+
     /**
      * Collect content of all json files (source) by key: sourceCollectKey and save to destination and use ey: destinationCollectKey 
      *
@@ -24,10 +26,19 @@ module.exports = {
      * @param  {String} sourceCollectKey
      * @param  {String} destination
      * @param  {String} destinationCollectKey
-     * @param  {Boolean/ Undefined} saveToFile
+     * @param  {Boolean|Undefined} saveToFile
      * @return {Object}
      */
-    collectByKey: collectByKey
+    collectByKey: collectByKey,
+
+    /**
+     * Save Stroing/Object/Array content to file
+     * 
+     * @param  {String} fileName file name to save
+     * @param  {Stroing|Object|Array} content  content to save
+     * @return {Boolean}          true if success and false on fail
+     */
+    saveToFile: save2File
 }
 
 function collect(source, concatContent) {
@@ -47,6 +58,23 @@ function collect(source, concatContent) {
         deasync.sleep(100)
     };
 
+    return result;
+}
+
+function save2File(fileName, content) {
+    if (content instanceof Object || Array.isArray(content))
+        content = JSON.stringify(content, null, 4);
+    var result = null;
+    fs.writeFile(fileName, content, function(err) {
+        if (err) {
+            result = false;
+        } else
+            result = true;
+    });
+
+    while (result == null) {
+        deasync.sleep(100)
+    };
     return result;
 }
 
@@ -89,17 +117,7 @@ function collectByKey(source, sourceCollectKey, destination, destinationCollectK
     sourceJson = merge(destinationJson, sourceJson);
 
     if (saveToFile === true) {
-        var result = null;
-        fs.writeFile(destination, JSON.stringify(sourceJson, null, 4), function(err) {
-            if (err) {
-                result = false;
-            } else
-                result = true;
-        });
-
-        while (result == null) {
-            deasync.sleep(100)
-        };
+        save2File(destination, sourceJson);
     }
     return sourceJson;
 }

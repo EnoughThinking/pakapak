@@ -1,6 +1,6 @@
 {
   "_from": "git://github.com/EndyKaufman/pakapak.git",
-  "_id": "pakapak@0.1.5",
+  "_id": "pakapak@0.1.6",
   "_inCache": true,
   "_installable": true,
   "_location": "/pakapak",
@@ -50,7 +50,10 @@
     "pakapak",
     "bower",
     "conf",
-    "npm"
+    "npm",
+    "saveToFile",
+    "collect",
+    "json"
   ],
   "license": "MIT",
   "main": "index.js",
@@ -64,5 +67,5 @@
   "scripts": {
     "test": "mocha --reporter spec"
   },
-  "version": "0.1.5"
+  "version": "0.1.6"
 }
